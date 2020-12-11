@@ -1,0 +1,27 @@
+name: 'web-deploy-sftp'
+author: 'Hamdardvir Singh <hamdard.kang@gmail.com>'
+description: 'Delploy to sftp'
+inputs:
+  host:
+    description: 'FTP host'
+    required: true
+  user:
+    description: 'FTP user'
+    required: true
+  password:
+    description: 'FTP password'
+    required: true
+  localDir:
+    description: 'Local directory'
+    required: false
+    default: '.'
+  remoteDir:
+    description: 'Remote directory'
+    required: false
+    default: '.'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+branding:
+  color: 'blue'
+  icon: 'upload-cloud'
